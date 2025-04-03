@@ -1,14 +1,36 @@
 $fontDisplay: "Rubik Moonrocks", sans-serif;
 $fontBody: "Rubik", sans-serif;
+$red: #FF6347;
+$yellow: #FFD700;
+$white: #FFFACD;
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: $fontBody;
     font-size: 16px;
     font-weight: normal;
+    color: $white;
+    background-color: $red;
+    margin: 0;
 }
 
 h1, h2, h3 {
     font-family: $fontDisplay;
     font-weight: normal;
+    color: $yellow;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
 }

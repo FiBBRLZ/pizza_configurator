@@ -98,6 +98,18 @@ fieldset {
   height: 15px;
   width: 15px;
 }
+.pizza-form label {
+  display: inline-block;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.pizza-form label:hover {
+  color: #FFD700;
+}
+.pizza-form input[name=toppings]:checked + label {
+  animation: pop 0.3s linear 1;
+}
 .pizza-form .pizza-crust label, .pizza-form fieldset legend, .pizza-form .pizza-name label {
   display: block;
   font-family: "Rubik Moonrocks", sans-serif;
@@ -144,12 +156,13 @@ fieldset {
   margin: 0;
   font-size: 24px;
 }
-.pizza-preview .pizza-name {
+.pizza-preview .custom-pizza-name {
   color: #000;
   text-align: center;
   margin: 10px 0;
   font-size: 46px;
   font-family: "Rubik Moonrocks", sans-serif;
+  word-break: break-word;
 }
 .pizza-preview .pizza-render {
   width: 300px;
@@ -192,7 +205,7 @@ fieldset {
 .pizza-preview .crust.stuffed {
   border: 20px solid #d67300;
 }
-.pizza-preview .crust.glutten-free {
+.pizza-preview .crust.gluten-free {
   border-color: #bd9465;
 }
 .pizza-preview .sauce.tomato {
@@ -206,6 +219,12 @@ fieldset {
 }
 .pizza-preview .sauce.pesto {
   background: #228B22;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -102,6 +102,18 @@ fieldset {
         height: 15px;
         width: 15px;
     }
+    label {
+        display: inline-block;
+        padding: 5px 0;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: $yellow;
+        }
+    }
+    input[name="toppings"]:checked + label {
+        animation: pop 0.3s linear 1;
+    }
     .pizza-crust label, fieldset legend, .pizza-name label {
         display: block;
         font-family: $fontDisplay;
@@ -150,12 +162,13 @@ fieldset {
         margin: 0;
         font-size: 24px;
     }
-    .pizza-name {
+    .custom-pizza-name {
         color: #000;
         text-align: center;
         margin: 10px 0;
         font-size: 46px;
         font-family: $fontDisplay;
+        word-break: break-word;
     }
     .pizza-render {
         width: 300px;
@@ -198,7 +211,7 @@ fieldset {
     .crust.stuffed {
         border: 20px solid #d67300;
     }
-    .crust.glutten-free {
+    .crust.gluten-free {
         border-color:#bd9465;
     }
     .sauce.tomato {
@@ -213,4 +226,9 @@ fieldset {
     .sauce.pesto {
         background: #228B22;
     }
+}
+
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
 }

@@ -1,12 +1,132 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Rubik", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: normal;
+  color: #FFFACD;
+  background-color: #FF6347;
+  margin: 0;
+}
+
+header {
+  margin: 20px 0;
 }
 
 h1, h2, h3 {
   font-family: "Rubik Moonrocks", sans-serif;
   font-weight: normal;
+  color: #FFD700;
+}
+
+h1 {
+  text-align: center;
+  font-size: 58px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.btn {
+  background: #FFD700;
+  border: none;
+  padding: 15px 30px;
+  font-size: 22px;
+  font-family: "Rubik Moonrocks", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+  box-shadow: 6px 6px 11px #cf503a, -6px -6px 11px #ff7654;
+}
+.btn:hover {
+  box-shadow: 0 0 0 0;
+}
+
+.pizza-configurator {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  grid-gap: 20px;
+  margin: 20px 0;
+}
+.pizza-configurator h2 {
+  margin: 0;
+}
+
+.pizza-details, .pizza-form, h1 {
+  padding: 30px;
+  border-radius: 15px;
+  background: #FF6347;
+  box-shadow: inset 5px 5px 10px #cf503a, inset -5px -5px 10px #ff7654;
+}
+
+.pizza-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.pizza-form input[type=radio], .pizza-form input[type=checkbox] {
+  accent-color: #FFD700;
+  height: 15px;
+  width: 15px;
+}
+.pizza-form .pizza-crust label, .pizza-form fieldset legend, .pizza-form .pizza-name label {
+  display: block;
+  font-family: "Rubik Moonrocks", sans-serif;
+  color: #FFD700;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.pizza-form input#pizza-name, .pizza-form select {
+  background: none;
+  border: 2px solid #FFD700;
+  padding: 15px 30px;
+  display: block;
+  width: 100%;
+  color: #FFFACD;
+  border-radius: 15px;
+  font-size: inherit;
+  font-family: inherit;
+}
+.pizza-form .select-wrap {
+  position: relative;
+}
+.pizza-form .select-wrap::after {
+  content: "⤦";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+.pizza-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.pizza-form #pizza-name::placeholder {
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */

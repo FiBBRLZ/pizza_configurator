@@ -17,17 +17,19 @@
         </header>
         <section class="pizza-configurator">
             <form action="" class="pizza-form">
-                <fieldset>
-                    <label for="pizza-crust">Choose your pizza crust:</label>
-                    <select id="pizza-crust" name="pizza_crust" aria-label="Pizza Crust Selection">
-                        <option value="classic" selected>Classic</option>
-                        <option value="thin">Thin & Crispy</option>
-                        <option value="stuffed">Stuffed Crust</option>
-                        <option value="gluten-free">Gluten-Free</option>
-                    </select>
+                <fieldset class="pizza-crust">
+                    <label for="pizza-crust">Choose your pizza crust</label>
+                    <div class="select-wrap">
+                        <select id="pizza-crust" name="pizza_crust" aria-label="Pizza Crust Selection">
+                            <option value="classic" selected>Classic</option>
+                            <option value="thin">Thin & Crispy</option>
+                            <option value="stuffed">Stuffed Crust</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                        </select>
+                    </div>
                 </fieldset>
-                <fieldset>
-                    <legend>Choose your pizza sauce:</legend>
+                <fieldset class="pizza-sauce">
+                    <legend>Choose your pizza sauce</legend>
                         <div>
                             <input type="radio" id="tomato" name="pizza_sauce" value="tomato" required>
                             <label for="tomato">🍅 Classic Tomato</label>
@@ -45,8 +47,8 @@
                             <label for="pesto">🌿 Basil Pesto</label>
                         </div>
                 </fieldset>
-                <fieldset>
-                    <legend>Choose your toppings:</legend>
+                <fieldset class="pizza-toppings">
+                    <legend>Choose your toppings</legend>
                     <div>
                       <input type="checkbox" id="mozzarella" name="toppings" value="mozzarella" class="cheese-option">
                       <label for="mozzarella">🧀 Mozzarella</label>
@@ -88,8 +90,8 @@
                       <label for="gold">🏆 Edible Gold Flakes</label>
                     </div>
                   </fieldset>
-                  <fieldset>
-                    <label for="pizza-name">Name your pizza:</label>
+                  <fieldset class="pizza-name">
+                    <label for="pizza-name">Name your pizza</label>
                     <input type="text" id="pizza-name" name="pizza_name" minlength="5" required placeholder="e.g., The Fruit Salad">
                     <small>Must be at least 5 characters long.</small>
                   </fieldset>

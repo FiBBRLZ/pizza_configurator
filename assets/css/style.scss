@@ -391,8 +391,27 @@ fieldset {
 }
 
 
-
-
 @keyframes pop{
     50%  {transform: scale(1.2);}
+}
+
+
+@media screen and (max-width: 768px) {
+    .pizza-configurator {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .pizza-preview .pizza-render {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: 100%;
+    }
+    h1 {
+        font-size: 32px;
+    }
 }

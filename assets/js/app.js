@@ -54,3 +54,31 @@ function handlePizzaOptions() {
 }
 
 handlePizzaOptions();
+
+
+function handleFormSubmission() {
+    const pizzaForm = $('.pizza-form');
+    const requiredWords = ['Epic', 'Ultra', 'Legendary', 'Gigantic'];
+
+    pizzaForm.on('submit', function(e) {
+        e.preventDefault();
+        const pizzaName = $('input#pizza-name').val();
+        const containsRequiredWord = requiredWords.some(word => pizzaName.includes(word));
+
+        //alert the user if they forgot to add cheese
+        if ($('.cheese-option:checked').length === 0) {
+            alert("You must choose at least one cheese!");
+            return;
+        }
+
+        //check if the user entered a valid pizza name
+        if (!containsRequiredWord) {
+            alert(`${pizzaName}? Really? You can do better than that, right?`);
+            return;
+        }
+        alert('Form Submitted');
+        // pizzaForm[0].submit();
+    });
+}
+
+handleFormSubmission();

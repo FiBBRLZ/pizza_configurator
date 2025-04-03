@@ -223,6 +223,103 @@ fieldset {
 .pizza-preview .toppings i::after, .pizza-preview .toppings i::before {
   display: block;
 }
+.pizza-preview .toppings i.mozzarella {
+  left: 80px;
+  top: -50px;
+}
+.pizza-preview .toppings i.mozzarella::after, .pizza-preview .toppings i.mozzarella::before {
+  content: "🧀";
+}
+.pizza-preview .toppings i.mozzarella::before {
+  transform: translate(75px, 110px);
+}
+.pizza-preview .toppings i.cheddar {
+  top: 30px;
+  right: 60px;
+}
+.pizza-preview .toppings i.cheddar::after, .pizza-preview .toppings i.cheddar::before {
+  content: "🧀";
+}
+.pizza-preview .toppings i.cheddar::before {
+  transform: translate(-115px, -10px);
+}
+.pizza-preview .toppings i.parmesan {
+  left: 30px;
+  top: 40px;
+}
+.pizza-preview .toppings i.parmesan::after, .pizza-preview .toppings i.parmesan::before {
+  content: "🧀";
+}
+.pizza-preview .toppings i.parmesan::before {
+  transform: translate(5px, -10px);
+}
+.pizza-preview .toppings i.bacon {
+  right: 80px;
+  bottom: 90px;
+}
+.pizza-preview .toppings i.bacon::after, .pizza-preview .toppings i.bacon::before {
+  content: "🥓";
+}
+.pizza-preview .toppings i.bacon::before {
+  transform: translate(-25px, -30px);
+}
+.pizza-preview .toppings i.mushrooms {
+  top: -40px;
+  left: 4px;
+}
+.pizza-preview .toppings i.mushrooms::after, .pizza-preview .toppings i.mushrooms::before {
+  content: "🍄";
+}
+.pizza-preview .toppings i.mushrooms::before {
+  transform: translate(135px, 180px);
+}
+.pizza-preview .toppings i.pickles {
+  top: 10px;
+  right: 100px;
+}
+.pizza-preview .toppings i.pickles::after, .pizza-preview .toppings i.pickles::before {
+  content: "🥒";
+}
+.pizza-preview .toppings i.pickles::before {
+  transform: translate(-65px, 3px);
+}
+.pizza-preview .toppings i.olives {
+  top: 10px;
+  right: 70px;
+}
+.pizza-preview .toppings i.olives::after, .pizza-preview .toppings i.olives::before {
+  content: "🫒";
+}
+.pizza-preview .toppings i.pineapple {
+  top: 20px;
+  right: 150px;
+}
+.pizza-preview .toppings i.pineapple::after, .pizza-preview .toppings i.pineapple::before {
+  content: "🍍";
+}
+.pizza-preview .toppings i.pineapple::before {
+  transform: translate(115px, -10px);
+}
+.pizza-preview .toppings i.chocolate {
+  bottom: 50px;
+  left: 20px;
+}
+.pizza-preview .toppings i.chocolate::after, .pizza-preview .toppings i.chocolate::before {
+  content: "🍫";
+}
+.pizza-preview .toppings i.chocolate::before {
+  transform: translate(66px, -31px);
+}
+.pizza-preview .toppings i.gold {
+  bottom: 27px;
+  left: 90px;
+}
+.pizza-preview .toppings i.gold::after, .pizza-preview .toppings i.gold::before {
+  content: "🏆";
+}
+.pizza-preview .toppings i.gold::before {
+  transform: translate(55px, -61px);
+}
 .pizza-preview .crust.classic {
   border-color: #ff8800;
 }
@@ -246,86 +343,6 @@ fieldset {
 }
 .pizza-preview .sauce.pesto {
   background: #228B22;
-}
-
-i.mozzarella {
-  left: 80px;
-  top: -50px;
-}
-i.mozzarella::after, i.mozzarella::before {
-  content: "🧀";
-}
-
-i.cheddar {
-  top: 30px;
-  right: 60px;
-}
-i.cheddar::after, i.cheddar::before {
-  content: "🧀";
-}
-
-i.parmesan {
-  left: 30px;
-  top: 40px;
-}
-i.parmesan::after, i.parmesan::before {
-  content: "🧀";
-}
-
-i.bacon {
-  right: 80px;
-  bottom: 90px;
-}
-i.bacon::after, i.bacon::before {
-  content: "🥓";
-}
-
-i.mushrooms {
-  top: -40px;
-  left: 4px;
-}
-i.mushrooms::after, i.mushrooms::before {
-  content: "🍄";
-}
-
-i.pickles {
-  top: 10px;
-  right: 100px;
-}
-i.pickles::after, i.pickles::before {
-  content: "🥒";
-}
-
-i.olives {
-  top: 10px;
-  right: 70px;
-}
-i.olives::after, i.olives::before {
-  content: "🫒";
-}
-
-i.pineapple {
-  top: 20px;
-  right: 150px;
-}
-i.pineapple::after, i.pineapple::before {
-  content: "🍍";
-}
-
-i.chocolate {
-  bottom: 50px;
-  left: 20px;
-}
-i.chocolate::after, i.chocolate::before {
-  content: "🍫";
-}
-
-i.gold {
-  bottom: 27px;
-  left: 90px;
-}
-i.gold::after, i.gold::before {
-  content: "🏆";
 }
 
 @keyframes pop {

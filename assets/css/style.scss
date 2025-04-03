@@ -228,6 +228,111 @@ fieldset {
                 display: block;
             }
         }
+        i.mozzarella {
+            left: 80px;
+            top: -50px;
+            &::after, &::before {
+                content: '🧀';
+            }
+            &::before {
+                transform: translate(75px, 110px);
+            }
+        }
+        
+        i.cheddar {
+            top: 30px;
+            right: 60px;
+            &::after, &::before {
+                content: '🧀';
+            }
+            &::before {
+                transform: translate(-115px, -10px);
+            }
+        }
+        
+        i.parmesan {
+            left: 30px;
+            top: 40px;
+            &::after, &::before {
+                content: '🧀';
+            }
+            &::before {
+                transform: translate(5px, -10px);
+            }
+        }
+        
+        i.bacon {
+            right: 80px;
+            bottom: 90px;
+            &::after, &::before {
+                content: '🥓';
+            }
+            &::before {
+                transform: translate(-25px, -30px);
+            }
+        }
+        
+        i.mushrooms {
+            top: -40px;
+            left: 4px;
+            &::after, &::before {
+                content: '🍄';
+            }
+            &::before {
+                transform: translate(135px, 180px);
+            }
+        }
+        
+        i.pickles {
+            top: 10px;
+            right: 100px;
+            &::after, &::before {
+                content: '🥒';
+            }
+            &::before {
+                transform: translate(-65px, 3px);
+            }
+        }
+        
+        i.olives {
+            top: 10px;
+            right: 70px;
+            &::after, &::before {
+                content: '🫒';
+            }
+        }
+        i.pineapple {
+            top: 20px;
+            right: 150px;
+            &::after, &::before {
+                content: '🍍';
+            }
+            &::before {
+                transform: translate(115px, -10px);
+            }
+        }
+        
+        i.chocolate {
+            bottom: 50px;
+            left: 20px;
+            &::after, &::before {
+                content: '🍫';
+            }
+            &::before {
+                transform: translate(66px, -31px);
+            }
+        }
+        
+        i.gold {
+            bottom: 27px;
+            left: 90px;
+            &::after, &::before {
+                content: '🏆';
+            }
+            &::before {
+                transform: translate(55px, -61px);
+            }
+        }
     }
     .crust.classic {
         border-color: #ff8800;
@@ -255,84 +360,7 @@ fieldset {
     }
 }
 
-i.mozzarella {
-    left: 80px;
-    top: -50px;
-    &::after, &::before {
-        content: '🧀';
-    }
-}
 
-i.cheddar {
-    top: 30px;
-    right: 60px;
-    &::after, &::before {
-        content: '🧀';
-    }
-}
-
-i.parmesan {
-    left: 30px;
-    top: 40px;
-    &::after, &::before {
-        content: '🧀';
-    }
-}
-
-i.bacon {
-    right: 80px;
-    bottom: 90px;
-    &::after, &::before {
-        content: '🥓';
-    }
-}
-
-i.mushrooms {
-    top: -40px;
-    left: 4px;
-    &::after, &::before {
-        content: '🍄';
-    }
-}
-
-i.pickles {
-    top: 10px;
-    right: 100px;
-    &::after, &::before {
-        content: '🥒';
-    }
-}
-
-i.olives {
-    top: 10px;
-    right: 70px;
-    &::after, &::before {
-        content: '🫒';
-    }
-}
-i.pineapple {
-    top: 20px;
-    right: 150px;
-    &::after, &::before {
-        content: '🍍';
-    }
-}
-
-i.chocolate {
-    bottom: 50px;
-    left: 20px;
-    &::after, &::before {
-        content: '🍫';
-    }
-}
-
-i.gold {
-    bottom: 27px;
-    left: 90px;
-    &::after, &::before {
-        content: '🏆';
-    }
-}
 
 
 

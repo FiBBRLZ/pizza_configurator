@@ -39,6 +39,7 @@ h2 {
 
 h3 {
     font-size: 30px;
+    margin: 0;
 }
 
 .container {
@@ -70,7 +71,7 @@ fieldset {
 
 .pizza-configurator {
     display: grid;
-    grid-template-columns: 1fr 350px;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     margin: 20px 0;
     h2 {
@@ -78,7 +79,13 @@ fieldset {
     }
 }
 
-.pizza-details, .pizza-form, h1 {
+.pizza-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pizza-details, .pizza-form, h1, .pizza-preview {
     padding: 30px;
     border-radius: 15px;
     background: $red;
@@ -133,5 +140,77 @@ fieldset {
         &::placeholder {
             color:inherit;
         }
+    }
+}
+
+.pizza-preview {
+    height: 100%;
+    h2 {
+        text-align: center;
+        margin: 0;
+        font-size: 24px;
+    }
+    .pizza-name {
+        color: #000;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 46px;
+        font-family: $fontDisplay;
+    }
+    .pizza-render {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: orange;
+        margin: 20px auto;
+        position: relative;
+        transition: all .3s ease-in-out;
+    }
+    .crust {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: 15px solid orange;
+        border-radius: 50%;
+        transition: border-color .3s ease-in-out;
+    }
+    .sauce {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+        border-radius: 50%;
+        background: orange;
+        transition: background-color .3s ease-in-out;
+    }
+    .crust.classic {
+        border-color: #ff8800;
+    }
+    .crust.thin {
+        border: 10px solid #fd9c2c;
+    }
+    .crust.stuffed {
+        border: 20px solid #d67300;
+    }
+    .crust.glutten-free {
+        border-color:#bd9465;
+    }
+    .sauce.tomato {
+        background: tomato;
+    }
+    .sauce.alfredo {
+        background: #d3c1ac;
+    }
+    .sauce.bbq {
+        background: #a52a2a;
+    }
+    .sauce.pesto {
+        background: #228B22;
     }
 }

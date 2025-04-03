@@ -34,6 +34,7 @@ h2 {
 
 h3 {
   font-size: 30px;
+  margin: 0;
 }
 
 .container {
@@ -65,7 +66,7 @@ fieldset {
 
 .pizza-configurator {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   margin: 20px 0;
 }
@@ -73,7 +74,13 @@ fieldset {
   margin: 0;
 }
 
-.pizza-details, .pizza-form, h1 {
+.pizza-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pizza-details, .pizza-form, h1, .pizza-preview {
   padding: 30px;
   border-radius: 15px;
   background: #FF6347;
@@ -127,6 +134,78 @@ fieldset {
 }
 .pizza-form #pizza-name::placeholder {
   color: inherit;
+}
+
+.pizza-preview {
+  height: 100%;
+}
+.pizza-preview h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+}
+.pizza-preview .pizza-name {
+  color: #000;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 46px;
+  font-family: "Rubik Moonrocks", sans-serif;
+}
+.pizza-preview .pizza-render {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: orange;
+  margin: 20px auto;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.pizza-preview .crust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: 15px solid orange;
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+}
+.pizza-preview .sauce {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: orange;
+  transition: background-color 0.3s ease-in-out;
+}
+.pizza-preview .crust.classic {
+  border-color: #ff8800;
+}
+.pizza-preview .crust.thin {
+  border: 10px solid #fd9c2c;
+}
+.pizza-preview .crust.stuffed {
+  border: 20px solid #d67300;
+}
+.pizza-preview .crust.glutten-free {
+  border-color: #bd9465;
+}
+.pizza-preview .sauce.tomato {
+  background: tomato;
+}
+.pizza-preview .sauce.alfredo {
+  background: #d3c1ac;
+}
+.pizza-preview .sauce.bbq {
+  background: #a52a2a;
+}
+.pizza-preview .sauce.pesto {
+  background: #228B22;
 }
 
 /*# sourceMappingURL=style.css.map */

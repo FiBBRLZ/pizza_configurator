@@ -11,9 +11,103 @@
     <script defer src="/assets/js/app.js"></script>
 </head>
 <body>
-    <header>
-        <h1>The Ultimate Pizza Configurator</h1>
-    </header>
+    <main class="container">
+        <header>
+            <h1>The Ultimate Pizza Configurator</h1>
+        </header>
+        <section class="pizza-configurator">
+            <form action="" class="pizza-form">
+                <fieldset>
+                    <label for="pizza-crust">Choose your pizza crust:</label>
+                    <select id="pizza-crust" name="pizza_crust" aria-label="Pizza Crust Selection">
+                        <option value="classic" selected>Classic</option>
+                        <option value="thin">Thin & Crispy</option>
+                        <option value="stuffed">Stuffed Crust</option>
+                        <option value="gluten-free">Gluten-Free</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Choose your pizza sauce:</legend>
+                        <div>
+                            <input type="radio" id="tomato" name="pizza_sauce" value="tomato" required>
+                            <label for="tomato">🍅 Classic Tomato</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="alfredo" name="pizza_sauce" value="alfredo" required>
+                            <label for="alfredo">🧄 Creamy Alfredo</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="bbq" name="pizza_sauce" value="bbq" required>
+                            <label for="bbq">🔥 Smoky BBQ</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pesto" name="pizza_sauce" value="pesto" required>
+                            <label for="pesto">🌿 Basil Pesto</label>
+                        </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Choose your toppings:</legend>
+                    <div>
+                      <input type="checkbox" id="mozzarella" name="toppings" value="mozzarella" class="cheese-option">
+                      <label for="mozzarella">🧀 Mozzarella</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="cheddar" name="toppings" value="cheddar" class="cheese-option">
+                      <label for="cheddar">🧀 Cheddar</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="parmesan" name="toppings" value="parmesan" class="cheese-option">
+                      <label for="parmesan">🧀 Parmesan</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="bacon" name="toppings" value="bacon">
+                      <label for="bacon">🥓 Bacon</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                      <label for="mushrooms">🍄 Mushrooms</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="olives" name="toppings" value="olives">
+                      <label for="olives">🫒 Olives</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                      <label for="pineapple">🍍 Pineapple</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="pickles" name="toppings" value="pickles">
+                      <label for="pickles">🥒 Pickles</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="chocolate" name="toppings" value="chocolate">
+                      <label for="chocolate">🍫 Chocolate Drizzle</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="gold" name="toppings" value="gold">
+                      <label for="gold">🏆 Edible Gold Flakes</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label for="pizza-name">Name your pizza:</label>
+                    <input type="text" id="pizza-name" name="pizza_name" minlength="5" required placeholder="e.g., The Fruit Salad">
+                    <small>Must be at least 5 characters long.</small>
+                  </fieldset>
+                  <button type="submit" class="btn">Build Pizza</button>
+            </form>
+            <div class="pizza-details">
+                <h2>Pizza Details</h2>
+                <div class="pizza-config">
+                    <h3>Pizza Crust</h3>
+                    <p class="crust"></p>
+                    <h3>Pizza Sauce</h3>
+                    <p class="souce"></p>
+                    <h3>Toppings</h3>
+                    <ul class="toppings"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
     
 </body>
 </html>

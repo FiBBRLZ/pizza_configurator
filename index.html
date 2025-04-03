@@ -17,7 +17,7 @@
             <h1>The Ultimate Pizza Configurator</h1>
         </header>
         <section class="pizza-configurator">
-            <form action="" class="pizza-form">
+            <form class="pizza-form">
                 <fieldset class="pizza-crust">
                     <label for="pizza-crust">Choose your pizza crust</label>
                     <div class="select-wrap">
@@ -93,12 +93,23 @@
                   </fieldset>
                   <fieldset class="pizza-name">
                     <label for="pizza-name">Name your pizza</label>
-                    <input type="text" id="pizza-name" name="pizza_name" minlength="5" required placeholder="e.g., The Fruit Salad">
-                    <small>Must be at least 5 characters long.</small>
+                    <input type="text" id="pizza-name" name="pizza_name" minlength="5" required placeholder="e.g., The Epic Fruit Salad">
+                    <small>Must be at least 5 characters long. Must use at least one of the theese words: Epic, Ultra, Legendary, Gigantic. <b>Case sensitive!</b></small>
                   </fieldset>
                   <button type="submit" class="btn">Build Pizza</button>
             </form>
             <div class="pizza-summary">
+                <div class="pizza-preview">
+                    <h2>Your dream pizza</h2>
+                    <h3 class="custom-pizza-name"></h3>
+                    <div class="pizza-render">
+                        <div class="crust classic">
+                            <div class="sauce">
+                                <div class="toppings"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="pizza-details">
                     <h2>Pizza Details</h2>
                     <div class="pizza-config">
@@ -110,17 +121,6 @@
                         <p class="selected-sauce"></p>
                         <h3>Toppings</h3>
                         <ul class="selected-toppings"></ul>
-                    </div>
-                </div>
-                <div class="pizza-preview">
-                    <h2>Your dream pizza</h2>
-                    <h3 class="custom-pizza-name"></h3>
-                    <div class="pizza-render">
-                        <div class="crust classic">
-                            <div class="sauce">
-                                <div class="toppings"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -35,6 +35,10 @@ function handlePizzaOptions() {
             toppingsTextValArr.splice(toppingsTextValArr.indexOf($(this).next().text()), 1);
         }
         pizzaRender.find('.toppings').attr('class', 'toppings').addClass(toppingsArr.join(' '));
+        pizzaRender.find('.toppings').empty();
+        toppingsArr.forEach(function(topping) {
+            pizzaRender.find('.toppings').append(`<i class="${topping}"></i>`);
+        })
 
         pizzaDetails.find('.selected-toppings').empty();
         for (let x of toppingsTextValArr) {

@@ -27,6 +27,11 @@ function handlePizzaOptions() {
     pizzaToppings.on('change', function() {
         const selectedTopping = $(this).val();
 
+        //display easter egg if pineapple is selected :) 
+        if(selectedTopping === 'pineapple') {
+            $('.alt-pizza').toggleClass('oh-no')
+        }
+
         if(toppingsArr.indexOf(selectedTopping) === -1) {
             toppingsArr.push(selectedTopping);
             toppingsTextValArr.push($(this).next().text());
@@ -38,7 +43,7 @@ function handlePizzaOptions() {
         pizzaRender.find('.toppings').empty();
         toppingsArr.forEach(function(topping) {
             pizzaRender.find('.toppings').append(`<i class="${topping}"></i>`);
-        })
+        });
 
         pizzaDetails.find('.selected-toppings').empty();
         for (let x of toppingsTextValArr) {
